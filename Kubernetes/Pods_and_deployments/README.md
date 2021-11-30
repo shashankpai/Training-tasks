@@ -2,7 +2,9 @@
 
 Kubernetes runs containers for your application workloads, but the containers themselves are not objects you need to work with. Every container belongs to a Pod, which is a Kubernetes object for managing one or more containers, and Pods, in turn, are managed by other resources
 
-# 2. Basic building blocks of Kubernetes: Pods which run containers and deployments which manage pods
+# 2. Basic building blocks of Kubernetes: 
+
+Pods which run containers and deployments which manage pods
 
 # 3. How kubernetes runs and manages containers
 
