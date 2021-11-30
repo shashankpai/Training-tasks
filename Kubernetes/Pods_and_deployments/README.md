@@ -44,11 +44,13 @@ selecting the ID of the first container in the Pod:
 
 # 6. Key takeaways uptil now 
    
-   # 6.1 Kubernetes does not run containers—the container ID in the Pod is a reference to another system that runs containers. 
-   # 6.2 Pods are allocated to one node when they’re created, and it’s that node’s responsibility to manage the Pod and its containers. It does that by working with the container runtime using a known API called the Container Runtime Interface (CRI).
+ 6.1 Kubernetes does not run containers—the container ID in the Pod is a reference to another system that runs containers. 
+ 6.2 Pods are allocated to one node when they’re created, and it’s that node’s responsibility to manage the Pod and its containers. It does that by working with the container runtime using a known API called the Container Runtime Interface (CRI).
 
 
-# 7 This exercise shows you how a Kubernetes node keeps its Pod containers running, but you’ll only be able to follow it if you’re using Docker as your container runtime. In our case we are using kind and it uses containerd as CRI
+# 7. This exercise shows you how a Kubernetes node keeps its Pod containers running, 
+
+but you’ll only be able to follow it if you’re using Docker as your container runtime. In our case we are using kind and it uses containerd as CRI
 
 find the Pod’s container:
 `docker container ls -q --filter label=io.kubernetes.container.name=hello-kiamol`
@@ -104,7 +106,7 @@ ba1c8c6cac11e       8050f6e540117       3 seconds ago       Running             
 A failed container is a temporary fault; the Pod still exists, and the Pod can be brought back up to spec with a new container. 
 
 
-# 8 Kubectl port-foward
+# 8. Kubectl port-foward
 
 Kubectl can forward traffic from a node to a Pod, which is a quick way to communicate with a Pod from outside the cluster. You can listen on a specific port on your machine—which is the single node in your cluster—and forward traffic to the application running in the Pod.
 
