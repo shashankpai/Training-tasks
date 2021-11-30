@@ -68,7 +68,7 @@ and find the container again:
 Kubernetes reacted when I deleted my Docker container. For an instant, the Pod had zero containers, but Kubernetes immediately created a replacement to repair the Pod and bring it back to the correct state.
 
 
-following the above exercise using crictl in containerd 
+following the above exercise using `crictl` in containerd 
 
 `kubectl run hello-kiamol --image=kiamol/ch02-hello-kiamol --restart=Always`
 
