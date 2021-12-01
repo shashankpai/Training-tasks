@@ -60,6 +60,7 @@ run `docker-compose up -d` to get started
 
 # 3 Prometheus Architecture
 
-https://images.prismic.io/gspann/478b51d2-5b2d-4ca2-9957-8848b782123a_Image+1_+Prometheus+Architecture.jpg?auto=compress,format
+![Alt text](https://programmer.group/images/article/21a4f428828262f180cb05937ef7e3fa.jpg"Prometheus Architecture")
 
-![Alt text](https://images.prismic.io/gspann/478b51d2-5b2d-4ca2-9957-8848b782123a_Image+1_+Prometheus+Architecture.jpg?auto=compress,format "Prometheus Architecture")
+Lets learn about all the components in this architecture 
+
