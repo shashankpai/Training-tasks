@@ -45,7 +45,7 @@ run `docker-compose up -d` to get started
 # Some pointers on prometheus
 
 # Basic terminologies in Prometheus
-
+```
 1 . Monitoring - systematic process of collecting and recording activities taking place in target project 
 2. Alerting - an alert is outcome of an alerting rule in prometheus that is actively firing. Alert are sent  from prom to alertmanager
 3. Alertmanager - it takes alert from prom server , aggreagates them into groups , deduplicates, silences , throttles and then sends out notifications 
@@ -56,6 +56,7 @@ run `docker-compose up -d` to get started
 
 7. sample - a sample is a single value at a point in time in a time series 
    ex : http_requests_total{method="get"}     32
+```
 
 
 # 3 Prometheus Architecture
