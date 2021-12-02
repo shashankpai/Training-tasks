@@ -145,5 +145,34 @@ quantile -
 `rate and irate`
 
 `rate()` : calculates the per-second average rate of increase of the timeseries in the range vector
+`layman terms`: outputs the rate at which particular counter is increasing
+ex: rate(prometheus_http_requests_total[1m])
+
+`irate` : calculates the instant rate of increase of time series in range vector
+
+ex : irate(prometheus_http_requests_total[1m])
+when to use `irate` and `rate`
+
+rate is used when you are calculating the slow moving counters, irate on the other hand should be useed when you are graphing fast or volatile moving counters
+
+`changes`
+
+ex : changes(process_start_time_seconds{job="node"}[1h])
+
+`deriv` : changes in last one hour
+
+deriv(process_resident_memory_bytes{job="prometheus"}[1h])
+
+`predict_linear` : predicts the future value of gauge , by looking into previous pattern
+
+predict how much memory will be free in next few hours 
+
+`predict_linear(node_memory_MemFree_bytes{job="node"}[1h],2*60*60)/1024/1024`
+
+
+
+
+
+
 
 

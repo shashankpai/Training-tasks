@@ -1,0 +1,26 @@
+version: "3.9"
+services:
+  prometheus:
+    image: prom/prometheus:v2.22.0
+    container_name: prometheus
+    ports:
+    - 9090:9090
+    command:
+    - --config.file=/etc/prometheus/prometheus.yaml
+    volumes:
+    - ./prometheus.yaml:/etc/prometheus/prometheus.yaml:ro
+    networks:
+     - prom
+  http-server:
+    container_name: http-server
+    image: http-server
+    ports:
+    - 8000:8000
+    - 8001:8001
+    build:
+      context: .
+    networks:
+      - prom
+networks:
+  prom:
+    name: prom

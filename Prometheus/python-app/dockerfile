@@ -1,0 +1,16 @@
+FROM python:3.8
+
+ENV SRC_DIR /usr/app/src
+
+RUN pip install prometheus_client
+
+WORKDIR ${SRC_DIR}/
+
+ENV PYTHONUNBUFFERED=1
+
+EXPOSE 8000
+
+COPY app1.py ${SRC_DIR}/
+RUN chmod u+x app1.py
+
+CMD [ "python", "app1.py"]
