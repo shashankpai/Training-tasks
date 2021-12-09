@@ -1,0 +1,4 @@
+auth: 
+  rootPassword: test
+image: 
+  PullPolicy: Always
