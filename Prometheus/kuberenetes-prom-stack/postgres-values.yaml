@@ -1,0 +1,7 @@
+postgresqlDatabase: test  # line 155
+metrics:                  # line 734
+  enabled: true
+serviceMonitor:           # line 744
+  enabled: false
+  additionalLabels:
+    prometheus: devops
